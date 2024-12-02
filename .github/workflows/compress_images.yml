@@ -1,14 +1,8 @@
 name: 压缩图片
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - "**.jpg"
-      - "**.jpeg"
-      - "**.png"
-      - "**.webp"
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 jobs:
   build:
     name: calibreapp/image-actions
